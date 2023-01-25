@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import UserPanel from './UserPanel.vue';
-import UserWork from './UserWork.vue';
+import UserPanel from './UserPanel/UserPanel.vue';
+import UserWork from './UserWork/UserWork.vue';
 export default {
   components: {
     UserPanel, UserWork
