@@ -24,7 +24,6 @@ export default {
   justify-content: space-between;
   width: 890px;
   height: 500px;
-  border: solid 1px;
   margin: auto;
   margin-top: 5vh;
   background-color: rgba(0, 32, 102, 0.541);

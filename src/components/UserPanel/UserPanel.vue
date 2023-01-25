@@ -48,11 +48,7 @@ export default {
     },
     methods:{
         darck() {
-            if (this.isDarck == 'deactive'){
-                this.isDarck= 'active'
-            }else{
-                this.isDarck = 'deactive'
-            }            
+            this.isDarck == 'deactive' ? this.isDarck = 'active' : this.isDarck = 'deactive'                       
         }
     }
 }
@@ -153,18 +149,17 @@ export default {
 
 .userProgress {
     display: flex;
-    width: 96%;
-    margin: 5px auto;
+    width: 276px;
+    margin: 6px ;
     flex-wrap: wrap;
 }
 
-.userProgress>div {
+.userProgress div {
     background: rgba(174,
             198,
             252,
             0.459);
     box-shadow: 0px 0px 5px;
-    margin: 0;
     width: 46%;
     height: 120px;
     margin: 5px;

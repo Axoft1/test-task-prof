@@ -22,6 +22,7 @@ export default {
     display: flex;
     flex-direction: column;
 }
+
 .item:hover {
     box-shadow: 0 0 10px black;
 }
@@ -31,12 +32,13 @@ export default {
     color: rgba(255, 255, 255, 0.877);
     text-align: center;
     font-weight: 100;
-    line-height: 14px;
+    line-height: 12px;
 }
 
 .progress__bar {
     color: rgba(255, 255, 255, 0.877);
-    margin: 10px 0px 0 35px;
+    margin: 0px 0px 10px 35px;
+    margin-top: auto;
 }
 
 .progress__bar img {
