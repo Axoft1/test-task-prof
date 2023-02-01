@@ -42,9 +42,11 @@ export default {
     margin: 0px 0px 10px 35px;
     margin-top: auto;
 }
-.progress__bar__item{
+
+.progress__bar__item {
     margin: 2px 0px 0px 0px;
 }
+
 .progress__bar img {
     position: absolute;
     margin: 15px 0px 0px -43px;

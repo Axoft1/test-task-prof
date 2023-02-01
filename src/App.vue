@@ -1,4 +1,4 @@
-<template>  
+<template>
   <PersonalAccount />
 </template>
 
@@ -17,6 +17,5 @@ export default {
 * {
   margin: 0;
   padding: 0;
-
 }
 </style>
