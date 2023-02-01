@@ -3,9 +3,9 @@
         <h5>Аттестация через</h5>
         <div class="progress__bar">
 
-            <VeProgress class="progress__bar__item" :progress="2 * 100 / 12" emptyColor="rgba(0, 0, 0, 0.432"
+            <VeProgress class="progress__bar__item" :progress="this.progress" emptyColor="rgba(0, 0, 0, 0.432"
                 color="rgba(231, 148, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="false"
-                :legend-formatter="myFormatter"/>
+                :legend="ctrtifical" :legend-formatter="myFormatter"/>
         </div>
         <!-- <p class="certification__date">дня</p> -->
     </div>
@@ -15,14 +15,16 @@ import { VeProgress } from "vue-ellipse-progress";
 export default {
     name: 'UserCertification',
     components: { VeProgress },
+    props:{
+        ctrtifical: Number,
+    },
     data(){
-        return{
-            legend:3
-        }
+        this.progress = this.ctrtifical*100/15
+        return
     },
     methods:{
         myFormatter ()  {
-            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 15px;">${this.legend}</p><p style="font-weight: bold;">дня</p>`;
+            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 15px;">${this.ctrtifical}</p><p style="font-weight: bold;">дня</p>`;
         }
     }
 }

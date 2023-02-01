@@ -11,7 +11,7 @@ import UserWork from './UserWork/UserWork.vue';
 export default {
   components: {
     UserPanel, UserWork
-  },
+  },  
   name: 'PersonalAccount',
   props: {
     msg: String

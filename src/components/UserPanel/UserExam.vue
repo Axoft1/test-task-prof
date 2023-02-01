@@ -2,7 +2,7 @@
     <div class="exam item">
         <h5>Предсменный экзаменатор</h5>
         <div class="progress__bar">
-            <VeProgress class="progress__bar__item" :progress="100" emptyColor="rgba(0, 0, 0, 0.432"
+            <VeProgress class="progress__bar__item" :progress="exam" emptyColor="rgba(0, 0, 0, 0.432"
                 color="rgba(141, 231, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="true"
                 :legend="100" />
             <img src="../../assets/check-list-test.svg" alt="">
@@ -14,6 +14,9 @@ import { VeProgress } from "vue-ellipse-progress";
 export default {
     name: 'UserExam',
     components: { VeProgress },
+    props:{
+        exam: Number,
+    }
 }
 </script>
 <style scoped>

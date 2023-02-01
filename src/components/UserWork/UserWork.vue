@@ -5,7 +5,7 @@
         </div>
         <div class="userWork__list">
             <BeginWork/>  
-            <AlertWork/> 
+            <AlertWork :alert="alert"/> 
             <TrainingWork/>         
             <ProgressWork/>          
         </div>
@@ -20,7 +20,12 @@ export default {
     name: 'UserWork', 
     components:{
         BeginWork, AlertWork, TrainingWork, ProgressWork
-    } 
+    },
+    data() {
+        return {
+            alert: 2,            
+        }
+    }, 
 }
 </script>
 <style scoped>

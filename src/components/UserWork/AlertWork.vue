@@ -1,7 +1,7 @@
 <template>
     <div class="item">
         <span>
-            <p>2</p>
+            <p>{{ alert }}</p>
         </span>
         <h5>Уведомления</h5>
         <img src="../../assets/email.svg" alt="">
@@ -10,6 +10,9 @@
 <script>
 export default {
     name: 'AlertWork',
+    props:{
+        alert:Number,
+    }
 }
 </script>
 <style scoped>

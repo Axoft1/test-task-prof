@@ -23,10 +23,10 @@
                 <p>Проходчик lV разряда</p>
             </div>
             <div class="userProgress">
-                <UserBefing />                
-                <UserExam />            
-                <UserTest />              
-                <UserCertification />             
+                <UserBefing :befing="befing"/>                
+                <UserExam :exam="exam"/>            
+                <UserTest :test="test"/>              
+                <UserCertification :ctrtifical="ctrtifical"/>             
             </div>
         </div>
     </div>
@@ -44,6 +44,10 @@ export default {
     data(){
         return{
             isDarck: 'deactive',
+            befing: 100,
+            exam: 100,
+            test: 12,
+            ctrtifical: 3,
         }        
     },
     methods:{

@@ -3,9 +3,9 @@
         <h5>Тестов выполнено</h5>
         <div class="progress__bar">
 
-            <VeProgress class="progress__bar__item" :progress="3 * 100 / 12" emptyColor="rgba(0, 0, 0, 0.432"
+            <VeProgress class="progress__bar__item" :progress="this.progress" emptyColor="rgba(0, 0, 0, 0.432"
                 color="rgba(141, 231, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="false"
-                :legend-formatter="myFormatter"/>
+                :legend="test" :legend-formatter="myFormatter"/>
         </div>
     </div>
 </template>
@@ -14,14 +14,17 @@ import { VeProgress } from "vue-ellipse-progress";
 export default {
     name: 'UserTest',
     components: { VeProgress },
-    data() {
-        return{
-            legend:12
-        }
+    props:{
+        test: Number,
+    },
+    data(){
+        this.progress = this.test*100/48
+        
+        return 
     },
     methods: {
         myFormatter() {
-            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 15px;">${this.legend}</p>`;
+            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 15px;">${this.test}</p>`;
         }
     }
 }
