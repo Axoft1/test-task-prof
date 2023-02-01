@@ -1,6 +1,6 @@
 <template>
     <div class="certification item">
-        <h5>Аттестация через</h5>
+        <h5>Аттестация <br />через</h5>
         <div class="progress__bar">
             <VeProgress class="progress__bar__item" :progress="this.progress" emptyColor="rgba(0, 0, 0, 0.432"
                 color="rgba(231, 148, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="false"
@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         myFormatter() {
-            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 15px;">${this.ctrtifical}</p><p style="font-weight: bold;">дня</p>`;
+            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 20px; font-family: 'Montserrat', sans-serif;">${this.ctrtifical}</p><p style="font-weight: bold; font-size: .75rem;">дня</p>`;
         }
     }
 }

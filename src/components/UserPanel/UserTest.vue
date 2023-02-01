@@ -1,6 +1,6 @@
 <template>
     <div class="test item">
-        <h5>Тестов выполнено</h5>
+        <h5>Тестов <br/> выполнено</h5>
         <div class="progress__bar">
             <VeProgress class="progress__bar__item" :progress="this.progress" emptyColor="rgba(0, 0, 0, 0.432"
                 color="rgba(141, 231, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="false"
@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         myFormatter() {
-            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 15px;">${this.test}</p>`;
+            return `<p style="font-weight: bold; font-size: 1.4rem; line-height: 15px; font-family: 'Montserrat', sans-serif;">${this.test}</p>`;
         }
     }
 }
@@ -31,6 +31,7 @@ export default {
 </script>
 <style scoped>
 .item {
+    
     cursor: pointer;
     display: flex;
     flex-direction: column;
