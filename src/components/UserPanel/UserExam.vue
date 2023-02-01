@@ -10,11 +10,12 @@
     </div>
 </template>
 <script>
+// VeProgress - progress animation library
 import { VeProgress } from "vue-ellipse-progress";
 export default {
     name: 'UserExam',
     components: { VeProgress },
-    props:{
+    props: {
         exam: Number,
     }
 }

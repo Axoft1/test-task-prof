@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
+    <!-- UserPanel and UserWork - we throw the props -->
     <UserPanel :user="user" />
-    <UserWork :user="user[2]"/>
+    <UserWork :user="user[2]" />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ export default {
   },
   data() {
     return {
+      // user - uploading user data
       user: [
         {
           id: 1,
@@ -22,7 +24,7 @@ export default {
           patronymic: 'Отчество',
           date: 'хх.хх.хххх',
           service: 'ГОКИ 0000',
-          status: 'Проходчик lV разряда'
+          status: 'Проходчик IV разряда'
         },
 
         {

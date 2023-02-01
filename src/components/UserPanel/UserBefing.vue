@@ -3,13 +3,13 @@
         <h5>Инструктаж</h5>
         <div class="progress__bar">
             <VeProgress class="progress__bar__item" :progress="befing" emptyColor="rgba(0, 0, 0, 0.432"
-                color="rgba(141, 231, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="true"
-                 />
+                color="rgba(141, 231, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="true" />
             <img src="../../assets/check-list.svg" alt="">
         </div>
     </div>
 </template>
 <script>
+// VeProgress - progress animation library
 import { VeProgress } from "vue-ellipse-progress";
 export default {
     name: 'UserBefing',

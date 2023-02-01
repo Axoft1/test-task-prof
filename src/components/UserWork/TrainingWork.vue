@@ -58,6 +58,7 @@ export default {
     background-color: rgb(253, 176, 33);
     transition: .2s;
 }
+
 .userWork__list__work img {
     transform: rotate(-50deg);
 }

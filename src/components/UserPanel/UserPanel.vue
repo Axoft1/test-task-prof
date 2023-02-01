@@ -1,7 +1,7 @@
 <template>
     <div class="userPanel">
-        <header class="header">
-            <div class="dateInfo">                
+        <header class="userPanel__header">
+            <div class="dateInfo">
                 <p>xx.xx.xxxx</p>
                 <p>xx:xx</p>
             </div>
@@ -10,10 +10,10 @@
                 <img src="../../assets/exit.svg" alt="">
             </button>
         </header>
-        <div class="theme">
+        <div class="userPanel__theme">
             <input type="checkbox" id="toggle" class="checkbox" checked />
             <span aria-hidden="true" class="switch"></span>
-            <img @click="darck" src="../../assets/sun.svg" alt="" v-bind:class="isDarck" >
+            <img @click="darck" src="../../assets/sun.svg" alt="" v-bind:class="isDarck">
         </div>
         <div class="userPanel__item">
             <div class="userItem">
@@ -23,15 +23,16 @@
                 <p>{{ user[0].status }}</p>
             </div>
             <div class="userProgress">
-                <UserBefing :befing="user[1].befing"/>                
-                <UserExam :exam="user[1].exam"/>            
-                <UserTest :test="user[1].test"/>              
-                <UserCertification :ctrtifical="user[1].ctrtifical"/>             
+                <UserBefing :befing="user[1].befing" />
+                <UserExam :exam="user[1].exam" />
+                <UserTest :test="user[1].test" />
+                <UserCertification :ctrtifical="user[1].ctrtifical" />
             </div>
         </div>
     </div>
 </template>
 <script>
+// VeProgress - progress animation library
 import { VeProgress } from "vue-ellipse-progress";
 import UserBefing from './UserBefing.vue';
 import UserExam from './UserExam';
@@ -39,19 +40,19 @@ import UserTest from './UserTest';
 import UserCertification from './UserCertification';
 export default {
     name: 'UserPanel',
-
     components: { VeProgress, UserBefing, UserExam, UserTest, UserCertification },
-    props:{
+    props: {
         user: {}
     },
-    data(){       
-        return{
-            isDarck: 'deactive',            
-        }        
+    data() {
+        return {
+            isDarck: 'deactive',
+        }
     },
-    methods:{
+    methods: {
+        //darck - theme change button
         darck() {
-            this.isDarck == 'deactive' ? this.isDarck = 'active' : this.isDarck = 'deactive'                       
+            this.isDarck == 'deactive' ? this.isDarck = 'active' : this.isDarck = 'deactive'
         }
     }
 }
@@ -64,7 +65,7 @@ export default {
     box-shadow: 1px 0 3px rgba(0, 32, 102, 0.637);
 }
 
-.header {
+.userPanel__header {
     display: flex;
     justify-content: space-between;
 }
@@ -89,25 +90,26 @@ export default {
     line-height: 15px;
 }
 
-.theme {
+.userPanel__theme {
     display: flex;
     width: 98%;
     height: 100px;
     justify-content: end;
 }
 
-.theme img {
+.userPanel__theme img {
     position: absolute;
-    /* margin: 23px 30px 0 0; */
     cursor: pointer;
     transition: .2s;
 }
-.deactive {    
-    margin: 23px 30px 0 0;    
+
+.deactive {
+    margin: 23px 30px 0 0;
 }
-.active{
-        margin: 23px 7px 0 0;
-        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(0%) contrast(104%);       
+
+.active {
+    margin: 23px 7px 0 0;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(0%) contrast(104%);
 }
 
 .switch {
@@ -153,7 +155,7 @@ export default {
 .userProgress {
     display: flex;
     width: 276px;
-    margin: 6px ;
+    margin: 6px;
     flex-wrap: wrap;
 }
 

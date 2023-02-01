@@ -10,8 +10,8 @@
 <script>
 export default {
     name: 'AlertWork',
-    props:{
-        alert:Number,
+    props: {
+        alert: Number,
     }
 }
 </script>

@@ -2,25 +2,24 @@
     <div class="test item">
         <h5>Тестов выполнено</h5>
         <div class="progress__bar">
-
             <VeProgress class="progress__bar__item" :progress="this.progress" emptyColor="rgba(0, 0, 0, 0.432"
                 color="rgba(141, 231, 23, 1)" size="60" :thickness="6" :emptyThickness="6" :hideLegend="false"
-                :legend="test" :legend-formatter="myFormatter"/>
+                :legend="test" :legend-formatter="myFormatter" />
         </div>
     </div>
 </template>
 <script>
+// VeProgress - progress animation library
 import { VeProgress } from "vue-ellipse-progress";
 export default {
     name: 'UserTest',
     components: { VeProgress },
-    props:{
+    props: {
         test: Number,
     },
-    data(){
-        this.progress = this.test*100/48
-        
-        return 
+    data() {
+        this.progress = this.test * 100 / 48
+        return
     },
     methods: {
         myFormatter() {
