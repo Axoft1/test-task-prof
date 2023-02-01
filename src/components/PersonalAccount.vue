@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <UserPanel />
-    <UserWork />
+    <UserPanel :user="user" />
+    <UserWork :user="user[2]"/>
   </div>
 </template>
 
@@ -11,11 +11,32 @@ import UserWork from './UserWork/UserWork.vue';
 export default {
   components: {
     UserPanel, UserWork
-  },  
-  name: 'PersonalAccount',
-  props: {
-    msg: String
-  }
+  },
+  data() {
+    return {
+      user: [
+        {
+          id: 1,
+          name: 'Имя',
+          surname: 'Фамилия',
+          patronymic: 'Отчество',
+          date: 'хх.хх.хххх',
+          service: 'ГОКИ 0000',
+          status: 'Проходчик lV разряда'
+        },
+
+        {
+          befing: 100,
+          exam: 100,
+          test: 12,
+          ctrtifical: 3,
+        },
+        {
+          alert: 2,
+        }
+      ]
+    }
+  },
 }
 </script>
 <style>

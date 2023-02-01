@@ -5,7 +5,7 @@
         </div>
         <div class="userWork__list">
             <BeginWork/>  
-            <AlertWork :alert="alert"/> 
+            <AlertWork :alert="this.user.alert"/> 
             <TrainingWork/>         
             <ProgressWork/>          
         </div>
@@ -21,11 +21,9 @@ export default {
     components:{
         BeginWork, AlertWork, TrainingWork, ProgressWork
     },
-    data() {
-        return {
-            alert: 2,            
-        }
-    }, 
+    props:{
+        user: {}
+    },    
 }
 </script>
 <style scoped>

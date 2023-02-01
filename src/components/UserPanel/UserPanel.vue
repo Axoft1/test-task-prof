@@ -1,7 +1,7 @@
 <template>
     <div class="userPanel">
         <header class="header">
-            <div class="dateInfo">
+            <div class="dateInfo">                
                 <p>xx.xx.xxxx</p>
                 <p>xx:xx</p>
             </div>
@@ -17,16 +17,16 @@
         </div>
         <div class="userPanel__item">
             <div class="userItem">
-                <h4>Фамилия Имя Отчество</h4>
-                <h4>xx.xx.xxxx</h4>
-                <p>Таб.№ ГОКИ 0000</p>
-                <p>Проходчик lV разряда</p>
+                <h4>{{ user[0].surname }} {{ user[0].name }} {{ user[0].patronymic }}</h4>
+                <h4>{{ user[0].date }}</h4>
+                <p>Таб.№ {{ user[0].service }}</p>
+                <p>{{ user[0].status }}</p>
             </div>
             <div class="userProgress">
-                <UserBefing :befing="befing"/>                
-                <UserExam :exam="exam"/>            
-                <UserTest :test="test"/>              
-                <UserCertification :ctrtifical="ctrtifical"/>             
+                <UserBefing :befing="user[1].befing"/>                
+                <UserExam :exam="user[1].exam"/>            
+                <UserTest :test="user[1].test"/>              
+                <UserCertification :ctrtifical="user[1].ctrtifical"/>             
             </div>
         </div>
     </div>
@@ -41,13 +41,12 @@ export default {
     name: 'UserPanel',
 
     components: { VeProgress, UserBefing, UserExam, UserTest, UserCertification },
-    data(){
+    props:{
+        user: {}
+    },
+    data(){       
         return{
-            isDarck: 'deactive',
-            befing: 100,
-            exam: 100,
-            test: 12,
-            ctrtifical: 3,
+            isDarck: 'deactive',            
         }        
     },
     methods:{
